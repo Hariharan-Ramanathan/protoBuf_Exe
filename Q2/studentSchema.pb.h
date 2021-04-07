@@ -821,30 +821,30 @@ class student PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGuideByFieldNumber = 5,
+    kGuidebyFieldNumber = 5,
     kNameFieldNumber = 1,
     kSecFieldNumber = 4,
-    kSemesterDetailsFieldNumber = 6,
+    kSemesterdetailsFieldNumber = 6,
     kRollNumFieldNumber = 2,
     kClassFieldNumber = 3,
   };
-  // repeated .Q2.student.guideBy guide_by = 5;
-  int guide_by_size() const;
+  // repeated .Q2.student.guideBy guideby = 5;
+  int guideby_size() const;
   private:
-  int _internal_guide_by_size() const;
+  int _internal_guideby_size() const;
   public:
-  void clear_guide_by();
-  ::Q2::student_guideBy* mutable_guide_by(int index);
+  void clear_guideby();
+  ::Q2::student_guideBy* mutable_guideby(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student_guideBy >*
-      mutable_guide_by();
+      mutable_guideby();
   private:
-  const ::Q2::student_guideBy& _internal_guide_by(int index) const;
-  ::Q2::student_guideBy* _internal_add_guide_by();
+  const ::Q2::student_guideBy& _internal_guideby(int index) const;
+  ::Q2::student_guideBy* _internal_add_guideby();
   public:
-  const ::Q2::student_guideBy& guide_by(int index) const;
-  ::Q2::student_guideBy* add_guide_by();
+  const ::Q2::student_guideBy& guideby(int index) const;
+  ::Q2::student_guideBy* add_guideby();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student_guideBy >&
-      guide_by() const;
+      guideby() const;
 
   // string name = 1;
   void clear_name();
@@ -878,23 +878,23 @@ class student PROTOBUF_FINAL :
   std::string* _internal_mutable_sec();
   public:
 
-  // .Q2.student.semesterDetails semester_details = 6;
-  bool has_semester_details() const;
+  // .Q2.student.semesterDetails semesterdetails = 6;
+  bool has_semesterdetails() const;
   private:
-  bool _internal_has_semester_details() const;
+  bool _internal_has_semesterdetails() const;
   public:
-  void clear_semester_details();
-  const ::Q2::student_semesterDetails& semester_details() const;
-  ::Q2::student_semesterDetails* release_semester_details();
-  ::Q2::student_semesterDetails* mutable_semester_details();
-  void set_allocated_semester_details(::Q2::student_semesterDetails* semester_details);
+  void clear_semesterdetails();
+  const ::Q2::student_semesterDetails& semesterdetails() const;
+  ::Q2::student_semesterDetails* release_semesterdetails();
+  ::Q2::student_semesterDetails* mutable_semesterdetails();
+  void set_allocated_semesterdetails(::Q2::student_semesterDetails* semesterdetails);
   private:
-  const ::Q2::student_semesterDetails& _internal_semester_details() const;
-  ::Q2::student_semesterDetails* _internal_mutable_semester_details();
+  const ::Q2::student_semesterDetails& _internal_semesterdetails() const;
+  ::Q2::student_semesterDetails* _internal_mutable_semesterdetails();
   public:
-  void unsafe_arena_set_allocated_semester_details(
-      ::Q2::student_semesterDetails* semester_details);
-  ::Q2::student_semesterDetails* unsafe_arena_release_semester_details();
+  void unsafe_arena_set_allocated_semesterdetails(
+      ::Q2::student_semesterDetails* semesterdetails);
+  ::Q2::student_semesterDetails* unsafe_arena_release_semesterdetails();
 
   // int32 rollNum = 2;
   void clear_rollnum();
@@ -923,10 +923,10 @@ class student PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student_guideBy > guide_by_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student_guideBy > guideby_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sec_;
-  ::Q2::student_semesterDetails* semester_details_;
+  ::Q2::student_semesterDetails* semesterdetails_;
   ::PROTOBUF_NAMESPACE_ID::int32 rollnum_;
   ::PROTOBUF_NAMESPACE_ID::int32 class__;
   friend struct ::TableStruct_studentSchema_2eproto;
@@ -1046,25 +1046,25 @@ class allStudents PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAllStudentFieldNumber = 1,
+    kAllstudentFieldNumber = 1,
   };
-  // repeated .Q2.student all_student = 1;
-  int all_student_size() const;
+  // repeated .Q2.student allstudent = 1;
+  int allstudent_size() const;
   private:
-  int _internal_all_student_size() const;
+  int _internal_allstudent_size() const;
   public:
-  void clear_all_student();
-  ::Q2::student* mutable_all_student(int index);
+  void clear_allstudent();
+  ::Q2::student* mutable_allstudent(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student >*
-      mutable_all_student();
+      mutable_allstudent();
   private:
-  const ::Q2::student& _internal_all_student(int index) const;
-  ::Q2::student* _internal_add_all_student();
+  const ::Q2::student& _internal_allstudent(int index) const;
+  ::Q2::student* _internal_add_allstudent();
   public:
-  const ::Q2::student& all_student(int index) const;
-  ::Q2::student* add_all_student();
+  const ::Q2::student& allstudent(int index) const;
+  ::Q2::student* add_allstudent();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student >&
-      all_student() const;
+      allstudent() const;
 
   // @@protoc_insertion_point(class_scope:Q2.allStudents)
  private:
@@ -1073,7 +1073,7 @@ class allStudents PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student > all_student_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student > allstudent_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_studentSchema_2eproto;
 };
@@ -1592,172 +1592,172 @@ inline void student::set_allocated_sec(std::string* sec) {
   // @@protoc_insertion_point(field_set_allocated:Q2.student.sec)
 }
 
-// repeated .Q2.student.guideBy guide_by = 5;
-inline int student::_internal_guide_by_size() const {
-  return guide_by_.size();
+// repeated .Q2.student.guideBy guideby = 5;
+inline int student::_internal_guideby_size() const {
+  return guideby_.size();
 }
-inline int student::guide_by_size() const {
-  return _internal_guide_by_size();
+inline int student::guideby_size() const {
+  return _internal_guideby_size();
 }
-inline void student::clear_guide_by() {
-  guide_by_.Clear();
+inline void student::clear_guideby() {
+  guideby_.Clear();
 }
-inline ::Q2::student_guideBy* student::mutable_guide_by(int index) {
-  // @@protoc_insertion_point(field_mutable:Q2.student.guide_by)
-  return guide_by_.Mutable(index);
+inline ::Q2::student_guideBy* student::mutable_guideby(int index) {
+  // @@protoc_insertion_point(field_mutable:Q2.student.guideby)
+  return guideby_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student_guideBy >*
-student::mutable_guide_by() {
-  // @@protoc_insertion_point(field_mutable_list:Q2.student.guide_by)
-  return &guide_by_;
+student::mutable_guideby() {
+  // @@protoc_insertion_point(field_mutable_list:Q2.student.guideby)
+  return &guideby_;
 }
-inline const ::Q2::student_guideBy& student::_internal_guide_by(int index) const {
-  return guide_by_.Get(index);
+inline const ::Q2::student_guideBy& student::_internal_guideby(int index) const {
+  return guideby_.Get(index);
 }
-inline const ::Q2::student_guideBy& student::guide_by(int index) const {
-  // @@protoc_insertion_point(field_get:Q2.student.guide_by)
-  return _internal_guide_by(index);
+inline const ::Q2::student_guideBy& student::guideby(int index) const {
+  // @@protoc_insertion_point(field_get:Q2.student.guideby)
+  return _internal_guideby(index);
 }
-inline ::Q2::student_guideBy* student::_internal_add_guide_by() {
-  return guide_by_.Add();
+inline ::Q2::student_guideBy* student::_internal_add_guideby() {
+  return guideby_.Add();
 }
-inline ::Q2::student_guideBy* student::add_guide_by() {
-  // @@protoc_insertion_point(field_add:Q2.student.guide_by)
-  return _internal_add_guide_by();
+inline ::Q2::student_guideBy* student::add_guideby() {
+  // @@protoc_insertion_point(field_add:Q2.student.guideby)
+  return _internal_add_guideby();
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student_guideBy >&
-student::guide_by() const {
-  // @@protoc_insertion_point(field_list:Q2.student.guide_by)
-  return guide_by_;
+student::guideby() const {
+  // @@protoc_insertion_point(field_list:Q2.student.guideby)
+  return guideby_;
 }
 
-// .Q2.student.semesterDetails semester_details = 6;
-inline bool student::_internal_has_semester_details() const {
+// .Q2.student.semesterDetails semesterdetails = 6;
+inline bool student::_internal_has_semesterdetails() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || semester_details_ != nullptr);
+  PROTOBUF_ASSUME(!value || semesterdetails_ != nullptr);
   return value;
 }
-inline bool student::has_semester_details() const {
-  return _internal_has_semester_details();
+inline bool student::has_semesterdetails() const {
+  return _internal_has_semesterdetails();
 }
-inline void student::clear_semester_details() {
-  if (GetArena() == nullptr && semester_details_ != nullptr) {
-    delete semester_details_;
+inline void student::clear_semesterdetails() {
+  if (GetArena() == nullptr && semesterdetails_ != nullptr) {
+    delete semesterdetails_;
   }
-  semester_details_ = nullptr;
+  semesterdetails_ = nullptr;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const ::Q2::student_semesterDetails& student::_internal_semester_details() const {
-  const ::Q2::student_semesterDetails* p = semester_details_;
+inline const ::Q2::student_semesterDetails& student::_internal_semesterdetails() const {
+  const ::Q2::student_semesterDetails* p = semesterdetails_;
   return p != nullptr ? *p : reinterpret_cast<const ::Q2::student_semesterDetails&>(
       ::Q2::_student_semesterDetails_default_instance_);
 }
-inline const ::Q2::student_semesterDetails& student::semester_details() const {
-  // @@protoc_insertion_point(field_get:Q2.student.semester_details)
-  return _internal_semester_details();
+inline const ::Q2::student_semesterDetails& student::semesterdetails() const {
+  // @@protoc_insertion_point(field_get:Q2.student.semesterdetails)
+  return _internal_semesterdetails();
 }
-inline void student::unsafe_arena_set_allocated_semester_details(
-    ::Q2::student_semesterDetails* semester_details) {
+inline void student::unsafe_arena_set_allocated_semesterdetails(
+    ::Q2::student_semesterDetails* semesterdetails) {
   if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(semester_details_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(semesterdetails_);
   }
-  semester_details_ = semester_details;
-  if (semester_details) {
+  semesterdetails_ = semesterdetails;
+  if (semesterdetails) {
     _has_bits_[0] |= 0x00000001u;
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Q2.student.semester_details)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Q2.student.semesterdetails)
 }
-inline ::Q2::student_semesterDetails* student::release_semester_details() {
+inline ::Q2::student_semesterDetails* student::release_semesterdetails() {
   _has_bits_[0] &= ~0x00000001u;
-  ::Q2::student_semesterDetails* temp = semester_details_;
-  semester_details_ = nullptr;
+  ::Q2::student_semesterDetails* temp = semesterdetails_;
+  semesterdetails_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::Q2::student_semesterDetails* student::unsafe_arena_release_semester_details() {
-  // @@protoc_insertion_point(field_release:Q2.student.semester_details)
+inline ::Q2::student_semesterDetails* student::unsafe_arena_release_semesterdetails() {
+  // @@protoc_insertion_point(field_release:Q2.student.semesterdetails)
   _has_bits_[0] &= ~0x00000001u;
-  ::Q2::student_semesterDetails* temp = semester_details_;
-  semester_details_ = nullptr;
+  ::Q2::student_semesterDetails* temp = semesterdetails_;
+  semesterdetails_ = nullptr;
   return temp;
 }
-inline ::Q2::student_semesterDetails* student::_internal_mutable_semester_details() {
+inline ::Q2::student_semesterDetails* student::_internal_mutable_semesterdetails() {
   _has_bits_[0] |= 0x00000001u;
-  if (semester_details_ == nullptr) {
+  if (semesterdetails_ == nullptr) {
     auto* p = CreateMaybeMessage<::Q2::student_semesterDetails>(GetArena());
-    semester_details_ = p;
+    semesterdetails_ = p;
   }
-  return semester_details_;
+  return semesterdetails_;
 }
-inline ::Q2::student_semesterDetails* student::mutable_semester_details() {
-  // @@protoc_insertion_point(field_mutable:Q2.student.semester_details)
-  return _internal_mutable_semester_details();
+inline ::Q2::student_semesterDetails* student::mutable_semesterdetails() {
+  // @@protoc_insertion_point(field_mutable:Q2.student.semesterdetails)
+  return _internal_mutable_semesterdetails();
 }
-inline void student::set_allocated_semester_details(::Q2::student_semesterDetails* semester_details) {
+inline void student::set_allocated_semesterdetails(::Q2::student_semesterDetails* semesterdetails) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
-    delete semester_details_;
+    delete semesterdetails_;
   }
-  if (semester_details) {
+  if (semesterdetails) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(semester_details);
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(semesterdetails);
     if (message_arena != submessage_arena) {
-      semester_details = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, semester_details, submessage_arena);
+      semesterdetails = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, semesterdetails, submessage_arena);
     }
     _has_bits_[0] |= 0x00000001u;
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  semester_details_ = semester_details;
-  // @@protoc_insertion_point(field_set_allocated:Q2.student.semester_details)
+  semesterdetails_ = semesterdetails;
+  // @@protoc_insertion_point(field_set_allocated:Q2.student.semesterdetails)
 }
 
 // -------------------------------------------------------------------
 
 // allStudents
 
-// repeated .Q2.student all_student = 1;
-inline int allStudents::_internal_all_student_size() const {
-  return all_student_.size();
+// repeated .Q2.student allstudent = 1;
+inline int allStudents::_internal_allstudent_size() const {
+  return allstudent_.size();
 }
-inline int allStudents::all_student_size() const {
-  return _internal_all_student_size();
+inline int allStudents::allstudent_size() const {
+  return _internal_allstudent_size();
 }
-inline void allStudents::clear_all_student() {
-  all_student_.Clear();
+inline void allStudents::clear_allstudent() {
+  allstudent_.Clear();
 }
-inline ::Q2::student* allStudents::mutable_all_student(int index) {
-  // @@protoc_insertion_point(field_mutable:Q2.allStudents.all_student)
-  return all_student_.Mutable(index);
+inline ::Q2::student* allStudents::mutable_allstudent(int index) {
+  // @@protoc_insertion_point(field_mutable:Q2.allStudents.allstudent)
+  return allstudent_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student >*
-allStudents::mutable_all_student() {
-  // @@protoc_insertion_point(field_mutable_list:Q2.allStudents.all_student)
-  return &all_student_;
+allStudents::mutable_allstudent() {
+  // @@protoc_insertion_point(field_mutable_list:Q2.allStudents.allstudent)
+  return &allstudent_;
 }
-inline const ::Q2::student& allStudents::_internal_all_student(int index) const {
-  return all_student_.Get(index);
+inline const ::Q2::student& allStudents::_internal_allstudent(int index) const {
+  return allstudent_.Get(index);
 }
-inline const ::Q2::student& allStudents::all_student(int index) const {
-  // @@protoc_insertion_point(field_get:Q2.allStudents.all_student)
-  return _internal_all_student(index);
+inline const ::Q2::student& allStudents::allstudent(int index) const {
+  // @@protoc_insertion_point(field_get:Q2.allStudents.allstudent)
+  return _internal_allstudent(index);
 }
-inline ::Q2::student* allStudents::_internal_add_all_student() {
-  return all_student_.Add();
+inline ::Q2::student* allStudents::_internal_add_allstudent() {
+  return allstudent_.Add();
 }
-inline ::Q2::student* allStudents::add_all_student() {
-  // @@protoc_insertion_point(field_add:Q2.allStudents.all_student)
-  return _internal_add_all_student();
+inline ::Q2::student* allStudents::add_allstudent() {
+  // @@protoc_insertion_point(field_add:Q2.allStudents.allstudent)
+  return _internal_add_allstudent();
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Q2::student >&
-allStudents::all_student() const {
-  // @@protoc_insertion_point(field_list:Q2.allStudents.all_student)
-  return all_student_;
+allStudents::allstudent() const {
+  // @@protoc_insertion_point(field_list:Q2.allStudents.allstudent)
+  return allstudent_;
 }
 
 #ifdef __GNUC__

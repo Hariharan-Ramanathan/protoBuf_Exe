@@ -6,15 +6,15 @@
 using namespace std;
 
 void listStudents(Q2::allStudents& allStudentDetails){
-    int n = allStudentDetails.all_student_size();
+    int n = allStudentDetails.allstudent_size();
     for(int i=0;i<n;i++){
-        const Q2::student& s1 = allStudentDetails.all_student(i);
+        const Q2::student& s1 = allStudentDetails.allstudent(i);
         cout<<"Name        : "<<s1.name()<<endl;
         cout<<"Roll Number : "<<s1.rollnum()<<endl;
         cout<<"Class       : "<<s1.class_()<< " "<<s1.sec()<<endl;
-        int count = s1.guide_by_size();
+        int count = s1.guideby_size();
         for(int j=0;j<count-1;j++){
-            const Q2::student::guideBy& g1 = s1.guide_by(j);
+            const Q2::student::guideBy& g1 = s1.guideby(j);
             if(g1.gtype() == Q2::student::PARENT){
                 cout<<"| \n ----->Guided By Parent"<<endl;
                 if(g1.ptype() == Q2::student::FATHER){
@@ -36,7 +36,7 @@ void listStudents(Q2::allStudents& allStudentDetails){
     cout<<"------------------------------------------------------"<<endl;
     cout<<"Semester Details:"<<endl;
 
-    const Q2::student::semesterDetails& sem = s1.semester_details();
+    const Q2::student::semesterDetails& sem = s1.semesterdetails();
 
     cout<<"  Semester "<<sem.number()<<endl;
     int s = sem.marks_size();

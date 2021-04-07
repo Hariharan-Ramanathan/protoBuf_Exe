@@ -62,10 +62,10 @@ struct student_semesterDetailsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT student_semesterDetailsDefaultTypeInternal _student_semesterDetails_default_instance_;
 constexpr student::student(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : guide_by_()
+  : guideby_()
   , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , sec_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , semester_details_(nullptr)
+  , semesterdetails_(nullptr)
   , rollnum_(0)
   , class__(0){}
 struct studentDefaultTypeInternal {
@@ -79,7 +79,7 @@ struct studentDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT studentDefaultTypeInternal _student_default_instance_;
 constexpr allStudents::allStudents(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : all_student_(){}
+  : allstudent_(){}
 struct allStudentsDefaultTypeInternal {
   constexpr allStudentsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -131,8 +131,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_studentSchema_2eproto::offsets
   PROTOBUF_FIELD_OFFSET(::Q2::student, rollnum_),
   PROTOBUF_FIELD_OFFSET(::Q2::student, class__),
   PROTOBUF_FIELD_OFFSET(::Q2::student, sec_),
-  PROTOBUF_FIELD_OFFSET(::Q2::student, guide_by_),
-  PROTOBUF_FIELD_OFFSET(::Q2::student, semester_details_),
+  PROTOBUF_FIELD_OFFSET(::Q2::student, guideby_),
+  PROTOBUF_FIELD_OFFSET(::Q2::student, semesterdetails_),
   ~0u,
   ~0u,
   ~0u,
@@ -144,7 +144,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_studentSchema_2eproto::offsets
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::Q2::allStudents, all_student_),
+  PROTOBUF_FIELD_OFFSET(::Q2::allStudents, allstudent_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::Q2::student_guideBy)},
@@ -163,26 +163,26 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_studentSchema_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\023studentSchema.proto\022\002Q2\"\250\004\n\007student\022\014\n"
+  "\n\023studentSchema.proto\022\002Q2\"\245\004\n\007student\022\014\n"
   "\004name\030\001 \001(\t\022\017\n\007rollNum\030\002 \001(\005\022\r\n\005class\030\003 "
-  "\001(\005\022\013\n\003sec\030\004 \001(\t\022%\n\010guide_by\030\005 \003(\0132\023.Q2."
-  "student.guideBy\022:\n\020semester_details\030\006 \001("
-  "\0132\033.Q2.student.semesterDetailsH\000\210\001\001\032m\n\007g"
-  "uideBy\022\016\n\006number\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022 \n\005"
-  "gType\030\003 \001(\0162\021.Q2.student.guide\022\"\n\005pType\030"
-  "\004 \001(\0162\023.Q2.student.parents\032\264\001\n\017semesterD"
-  "etails\022\023\n\006number\030\001 \001(\005H\000\210\001\001\0220\n\005marks\030\002 \003"
-  "(\0132!.Q2.student.semesterDetails.Marks\032O\n"
-  "\005Marks\022\030\n\013subjectName\030\001 \001(\tH\000\210\001\001\022\022\n\005scor"
-  "e\030\002 \001(\005H\001\210\001\001B\016\n\014_subjectNameB\010\n\006_scoreB\t"
-  "\n\007_number\"!\n\005guide\022\n\n\006PARENT\020\000\022\014\n\010GUARDI"
-  "AN\020\001\"!\n\007parents\022\n\n\006FATHER\020\000\022\n\n\006MOTHER\020\001B"
-  "\023\n\021_semester_details\"/\n\013allStudents\022 \n\013a"
-  "ll_student\030\001 \003(\0132\013.Q2.studentb\006proto3"
+  "\001(\005\022\013\n\003sec\030\004 \001(\t\022$\n\007guideby\030\005 \003(\0132\023.Q2.s"
+  "tudent.guideBy\0229\n\017semesterdetails\030\006 \001(\0132"
+  "\033.Q2.student.semesterDetailsH\000\210\001\001\032m\n\007gui"
+  "deBy\022\016\n\006number\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022 \n\005gT"
+  "ype\030\003 \001(\0162\021.Q2.student.guide\022\"\n\005pType\030\004 "
+  "\001(\0162\023.Q2.student.parents\032\264\001\n\017semesterDet"
+  "ails\022\023\n\006number\030\001 \001(\005H\000\210\001\001\0220\n\005marks\030\002 \003(\013"
+  "2!.Q2.student.semesterDetails.Marks\032O\n\005M"
+  "arks\022\030\n\013subjectName\030\001 \001(\tH\000\210\001\001\022\022\n\005score\030"
+  "\002 \001(\005H\001\210\001\001B\016\n\014_subjectNameB\010\n\006_scoreB\t\n\007"
+  "_number\"!\n\005guide\022\n\n\006PARENT\020\000\022\014\n\010GUARDIAN"
+  "\020\001\"!\n\007parents\022\n\n\006FATHER\020\000\022\n\n\006MOTHER\020\001B\022\n"
+  "\020_semesterdetails\".\n\013allStudents\022\037\n\nalls"
+  "tudent\030\001 \003(\0132\013.Q2.studentb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_studentSchema_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_studentSchema_2eproto = {
-  false, false, 637, descriptor_table_protodef_studentSchema_2eproto, "studentSchema.proto", 
+  false, false, 633, descriptor_table_protodef_studentSchema_2eproto, "studentSchema.proto", 
   &descriptor_table_studentSchema_2eproto_once, nullptr, 0, 5,
   schemas, file_default_instances, TableStruct_studentSchema_2eproto::offsets,
   file_level_metadata_studentSchema_2eproto, file_level_enum_descriptors_studentSchema_2eproto, file_level_service_descriptors_studentSchema_2eproto,
@@ -1028,19 +1028,19 @@ void student_semesterDetails::InternalSwap(student_semesterDetails* other) {
 class student::_Internal {
  public:
   using HasBits = decltype(std::declval<student>()._has_bits_);
-  static const ::Q2::student_semesterDetails& semester_details(const student* msg);
-  static void set_has_semester_details(HasBits* has_bits) {
+  static const ::Q2::student_semesterDetails& semesterdetails(const student* msg);
+  static void set_has_semesterdetails(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::Q2::student_semesterDetails&
-student::_Internal::semester_details(const student* msg) {
-  return *msg->semester_details_;
+student::_Internal::semesterdetails(const student* msg) {
+  return *msg->semesterdetails_;
 }
 student::student(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  guide_by_(arena) {
+  guideby_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Q2.student)
@@ -1048,7 +1048,7 @@ student::student(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 student::student(const student& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_),
-      guide_by_(from.guide_by_) {
+      guideby_(from.guideby_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
@@ -1060,10 +1060,10 @@ student::student(const student& from)
     sec_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sec(), 
       GetArena());
   }
-  if (from._internal_has_semester_details()) {
-    semester_details_ = new ::Q2::student_semesterDetails(*from.semester_details_);
+  if (from._internal_has_semesterdetails()) {
+    semesterdetails_ = new ::Q2::student_semesterDetails(*from.semesterdetails_);
   } else {
-    semester_details_ = nullptr;
+    semesterdetails_ = nullptr;
   }
   ::memcpy(&rollnum_, &from.rollnum_,
     static_cast<size_t>(reinterpret_cast<char*>(&class__) -
@@ -1075,9 +1075,9 @@ void student::SharedCtor() {
 name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 sec_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&semester_details_) - reinterpret_cast<char*>(this)),
+    reinterpret_cast<char*>(&semesterdetails_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&class__) -
-    reinterpret_cast<char*>(&semester_details_)) + sizeof(class__));
+    reinterpret_cast<char*>(&semesterdetails_)) + sizeof(class__));
 }
 
 student::~student() {
@@ -1090,7 +1090,7 @@ void student::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   sec_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete semester_details_;
+  if (this != internal_default_instance()) delete semesterdetails_;
 }
 
 void student::ArenaDtor(void* object) {
@@ -1109,15 +1109,15 @@ void student::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  guide_by_.Clear();
+  guideby_.Clear();
   name_.ClearToEmpty();
   sec_.ClearToEmpty();
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    if (GetArena() == nullptr && semester_details_ != nullptr) {
-      delete semester_details_;
+    if (GetArena() == nullptr && semesterdetails_ != nullptr) {
+      delete semesterdetails_;
     }
-    semester_details_ = nullptr;
+    semesterdetails_ = nullptr;
   }
   ::memset(&rollnum_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&class__) -
@@ -1166,22 +1166,22 @@ const char* student::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .Q2.student.guideBy guide_by = 5;
+      // repeated .Q2.student.guideBy guideby = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_guide_by(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_guideby(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
-      // .Q2.student.semesterDetails semester_details = 6;
+      // .Q2.student.semesterDetails semesterdetails = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_semester_details(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_semesterdetails(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1246,20 +1246,20 @@ failure:
         4, this->_internal_sec(), target);
   }
 
-  // repeated .Q2.student.guideBy guide_by = 5;
+  // repeated .Q2.student.guideBy guideby = 5;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_guide_by_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_guideby_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, this->_internal_guide_by(i), target, stream);
+      InternalWriteMessage(5, this->_internal_guideby(i), target, stream);
   }
 
-  // .Q2.student.semesterDetails semester_details = 6;
-  if (_internal_has_semester_details()) {
+  // .Q2.student.semesterDetails semesterdetails = 6;
+  if (_internal_has_semesterdetails()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        6, _Internal::semester_details(this), target, stream);
+        6, _Internal::semesterdetails(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1278,9 +1278,9 @@ size_t student::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .Q2.student.guideBy guide_by = 5;
-  total_size += 1UL * this->_internal_guide_by_size();
-  for (const auto& msg : this->guide_by_) {
+  // repeated .Q2.student.guideBy guideby = 5;
+  total_size += 1UL * this->_internal_guideby_size();
+  for (const auto& msg : this->guideby_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -1299,12 +1299,12 @@ size_t student::ByteSizeLong() const {
         this->_internal_sec());
   }
 
-  // .Q2.student.semesterDetails semester_details = 6;
+  // .Q2.student.semesterDetails semesterdetails = 6;
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *semester_details_);
+        *semesterdetails_);
   }
 
   // int32 rollNum = 2;
@@ -1352,15 +1352,15 @@ void student::MergeFrom(const student& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  guide_by_.MergeFrom(from.guide_by_);
+  guideby_.MergeFrom(from.guideby_);
   if (from.name().size() > 0) {
     _internal_set_name(from._internal_name());
   }
   if (from.sec().size() > 0) {
     _internal_set_sec(from._internal_sec());
   }
-  if (from._internal_has_semester_details()) {
-    _internal_mutable_semester_details()->::Q2::student_semesterDetails::MergeFrom(from._internal_semester_details());
+  if (from._internal_has_semesterdetails()) {
+    _internal_mutable_semesterdetails()->::Q2::student_semesterDetails::MergeFrom(from._internal_semesterdetails());
   }
   if (from.rollnum() != 0) {
     _internal_set_rollnum(from._internal_rollnum());
@@ -1392,15 +1392,15 @@ void student::InternalSwap(student* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
-  guide_by_.InternalSwap(&other->guide_by_);
+  guideby_.InternalSwap(&other->guideby_);
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   sec_.Swap(&other->sec_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(student, class__)
       + sizeof(student::class__)
-      - PROTOBUF_FIELD_OFFSET(student, semester_details_)>(
-          reinterpret_cast<char*>(&semester_details_),
-          reinterpret_cast<char*>(&other->semester_details_));
+      - PROTOBUF_FIELD_OFFSET(student, semesterdetails_)>(
+          reinterpret_cast<char*>(&semesterdetails_),
+          reinterpret_cast<char*>(&other->semesterdetails_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata student::GetMetadata() const {
@@ -1416,14 +1416,14 @@ class allStudents::_Internal {
 
 allStudents::allStudents(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  all_student_(arena) {
+  allstudent_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Q2.allStudents)
 }
 allStudents::allStudents(const allStudents& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      all_student_(from.all_student_) {
+      allstudent_(from.allstudent_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:Q2.allStudents)
 }
@@ -1457,7 +1457,7 @@ void allStudents::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  all_student_.Clear();
+  allstudent_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1468,13 +1468,13 @@ const char* allStudents::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated .Q2.student all_student = 1;
+      // repeated .Q2.student allstudent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_all_student(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_allstudent(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -1508,12 +1508,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .Q2.student all_student = 1;
+  // repeated .Q2.student allstudent = 1;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_all_student_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_allstudent_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_all_student(i), target, stream);
+      InternalWriteMessage(1, this->_internal_allstudent(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1532,9 +1532,9 @@ size_t allStudents::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .Q2.student all_student = 1;
-  total_size += 1UL * this->_internal_all_student_size();
-  for (const auto& msg : this->all_student_) {
+  // repeated .Q2.student allstudent = 1;
+  total_size += 1UL * this->_internal_allstudent_size();
+  for (const auto& msg : this->allstudent_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -1570,7 +1570,7 @@ void allStudents::MergeFrom(const allStudents& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  all_student_.MergeFrom(from.all_student_);
+  allstudent_.MergeFrom(from.allstudent_);
 }
 
 void allStudents::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -1594,7 +1594,7 @@ bool allStudents::IsInitialized() const {
 void allStudents::InternalSwap(allStudents* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  all_student_.InternalSwap(&other->all_student_);
+  allstudent_.InternalSwap(&other->allstudent_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata allStudents::GetMetadata() const {

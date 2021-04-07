@@ -29,7 +29,7 @@ void getDetails(Q2::student* s1, char semNum){
     s1->set_sec(sec);
 
     while(1){
-        Q2::student::guideBy* g1 = s1->add_guide_by();
+        Q2::student::guideBy* g1 = s1->add_guideby();
         cout<<"Enter parent/guardian (or leave empty)"<<endl;
         string gType = "";
 
@@ -71,7 +71,7 @@ void getDetails(Q2::student* s1, char semNum){
 
     int sub = 5;
     cout<<"Semester"<<semNum<<" Details:-"<<endl;
-    Q2::student::semesterDetails* sem = s1->mutable_semester_details();
+    Q2::student::semesterDetails* sem = s1->mutable_semesterdetails();
     sem->set_number(semNum - 48);
     while(sub>0){
         Q2::student::semesterDetails::Marks* m1 = sem->add_marks();
@@ -110,7 +110,7 @@ int main(int argc ,char* argv[]){
     }
     char* temp = argv[1];
 
-    getDetails(allStudentsDetails.add_all_student(), temp[1]);
+    getDetails(allStudentsDetails.add_allstudent(), temp[1]);
 
     if(!allStudentsDetails.SerializeToOstream(&ofs)){
         cout<<"Error writing file"<<endl;

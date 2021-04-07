@@ -29,10 +29,10 @@ message student{
         }
         repeated Marks marks = 2;
     }
-    repeated guideBy guide_by= 5;
-    optional semesterDetails semester_details = 6;
+    repeated guideBy guideby= 5;
+    optional semesterDetails semesterdetails = 6;
 }
 
 message allStudents{
-    repeated student all_student = 1;
+    repeated student allstudent = 1;
 }
