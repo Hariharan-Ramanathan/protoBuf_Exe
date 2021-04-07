@@ -58,7 +58,7 @@ void listStudents(Q2::allStudents& allStudentDetails, string folder, string file
             cout<<allMarks.score() <<endl;
         }
         cout<<"======================================================"<<endl;
-
+        semesterdetails.close();
     // }
     }else{
         cout<<"Student Details not filled yet"<<endl;
@@ -92,7 +92,7 @@ int main(int argc, char* argv[]){
     }
 
     listStudents(allStudentsDetails, fileName, file2Name);
-
+    ifs.close();
     google::protobuf::ShutdownProtobufLibrary();
 
     ifs.close();
