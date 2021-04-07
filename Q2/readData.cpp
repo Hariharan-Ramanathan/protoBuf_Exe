@@ -5,49 +5,63 @@
 
 using namespace std;
 
-void listStudents(Q2::allStudents& allStudentDetails){
+void listStudents(Q2::allStudents& allStudentDetails, string folder, string file){
     int n = allStudentDetails.allstudent_size();
-    for(int i=0;i<n;i++){
-        const Q2::student& s1 = allStudentDetails.allstudent(i);
-        cout<<"Name        : "<<s1.name()<<endl;
-        cout<<"Roll Number : "<<s1.rollnum()<<endl;
-        cout<<"Class       : "<<s1.class_()<< " "<<s1.sec()<<endl;
-        int count = s1.guideby_size();
-        for(int j=0;j<count-1;j++){
-            const Q2::student::guideBy& g1 = s1.guideby(j);
-            if(g1.gtype() == Q2::student::PARENT){
-                cout<<"| \n ----->Guided By Parent"<<endl;
-                if(g1.ptype() == Q2::student::FATHER){
-                    cout<<"------>Father Name :";
+    fstream studentDetails(folder+"/studentDetails.txt", ios::in | ios::binary);
+    if(studentDetails){
+        Q2::student studentdetails;
+        studentdetails.ParseFromIstream(&studentDetails);
+        // for(int i=0;i<n;i++){
+            // const Q2::student& s1 = allStudentDetails.allstudent(i);
+            cout<<"Name        : "<<studentdetails.name()<<endl;
+            cout<<"Roll Number : "<<studentdetails.rollnum()<<endl;
+            cout<<"Class       : "<<studentdetails.class_()<< " "<<studentdetails.sec()<<endl;
+            int count = studentdetails.guideby_size();
+            for(int j=0;j<count-1;j++){
+                const Q2::student::guideBy& g1 = studentdetails.guideby(j);
+                if(g1.gtype() == Q2::student::PARENT){
+                    cout<<"| \n ----->Guided By Parent"<<endl;
+                    if(g1.ptype() == Q2::student::FATHER){
+                        cout<<"------>Father Name :";
+                    }
+                    else{
+                        cout<<"------>Mother Name :";
+
+                    }
+                    cout<<g1.name()<<endl;
                 }
-                else{
-                    cout<<"------>Mother Name :";
-
+                else if(g1.gtype() == Q2::student::GUARDIAN){
+                    cout<<"| \n ----->Guided By Guardian"<<endl;
+                    cout<<"----->Guardian Name :"<<g1.name()<<endl;
                 }
-                cout<<g1.name()<<endl;
-            }
-            else if(g1.gtype() == Q2::student::GUARDIAN){
-                cout<<"| \n ----->Guided By Guardian"<<endl;
-                cout<<"----->Guardian Name :"<<g1.name()<<endl;
-            }
 
-                cout<<"----->Phone Number :"<<g1.number()<<endl;
-        }    
-    cout<<"------------------------------------------------------"<<endl;
-    cout<<"Semester Details:"<<endl;
+                    cout<<"----->Phone Number :"<<g1.number()<<endl;
+            }    
+        cout<<"------------------------------------------------------"<<endl;
+        cout<<"Semester Details:"<<endl;
+        studentDetails.close();
 
-    const Q2::student::semesterDetails& sem = s1.semesterdetails();
+        folder += "/";
+        folder+=file;
 
-    cout<<"  Semester "<<sem.number()<<endl;
-    int s = sem.marks_size();
-    cout<<"  Marks :"<<endl;
-    for(int k=0;k<s;k++){
-        const Q2::student::semesterDetails::Marks& allMarks = sem.marks(k);
-        cout<<"    "<<allMarks.subjectname() << " = ";
-        cout<<allMarks.score() <<endl;
-    }
-    cout<<"======================================================"<<endl;
+        fstream semesterdetails(folder, ios::in|ios::binary);
 
+        Q2::student::semesterDetails sem;
+        sem.ParseFromIstream(&semesterdetails);
+
+        cout<<"  Semester "<<sem.number()<<endl;
+        int s = sem.marks_size();
+        cout<<"  Marks :"<<endl;
+        for(int k=0;k<s;k++){
+            const Q2::student::semesterDetails::Marks& allMarks = sem.marks(k);
+            cout<<"    "<<allMarks.subjectname() << " = ";
+            cout<<allMarks.score() <<endl;
+        }
+        cout<<"======================================================"<<endl;
+
+    // }
+    }else{
+        cout<<"Student Details not filled yet"<<endl;
     }
 
 }
@@ -77,9 +91,11 @@ int main(int argc, char* argv[]){
         return -1;
     }
 
-    listStudents(allStudentsDetails);
+    listStudents(allStudentsDetails, fileName, file2Name);
 
     google::protobuf::ShutdownProtobufLibrary();
-    
+
+    ifs.close();
+
     return 0;
 }
