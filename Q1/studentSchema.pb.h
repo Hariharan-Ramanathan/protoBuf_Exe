@@ -20,6 +20,7 @@
 #endif
 
 #include <google/protobuf/port_undef.inc>
+#include<google/protobuf/text_format.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
