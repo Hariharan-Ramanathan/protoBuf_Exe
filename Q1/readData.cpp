@@ -13,9 +13,9 @@ void listStudents(Q1::allStudents& allStudentDetails){
 
 //************ access fields without knowning proto ******************
 
-        // int totalFields = s1.GetDescriptor()->field_count();
+        int totalFields = s1.GetDescriptor()->field_count();
 
-        // for(int i=1;i<totalFields;i++){
+        for(int i=0;i<totalFields;i++){
         //     string s = s1.GetDescriptor()->field(i)->DebugString();
         //     cout<<s<<endl;
 
@@ -26,7 +26,10 @@ void listStudents(Q1::allStudents& allStudentDetails){
         //     string s = s1.GetDescriptor()->FindFieldByNumber(i)->DebugString();
         //     cout<<s<<endl;
 
-        // }
+        const google::protobuf::FieldDescriptor* fielddescriptor = s1.GetDescriptor()->field(i);
+        cout<<fielddescriptor->full_name()<<endl;
+
+        }
 
 
 

@@ -1,0 +1,30 @@
+syntax = "proto3";
+package Q1;
+
+message student{
+    string name = 1;
+    int32 rollNum = 2;
+    int32 class = 3;
+    string sec = 4;
+
+    enum guide{
+        PARENT = 0;
+        GUARDIAN = 1;
+    }
+    enum parents{
+        FATHER = 0;
+        MOTHER = 1;
+    }
+    message guideBy{
+        string number = 1;
+        string name = 2;
+        guide gType = 3;
+        parents pType = 4;
+    }
+
+    repeated guideBy guide_by= 5;
+}
+
+message allStudents{
+    repeated student all_student = 1;
+}
